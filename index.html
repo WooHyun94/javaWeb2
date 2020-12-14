@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+  20_2학기
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <style>
+    .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+  }
+  </style>
+  <link href="cover.css" rel="stylesheet">
+  </head>
+  <script>
+    let today = new Date();   
+    var week = new Array('월', '화', '수', '목', '금');
+    hour = today.getHours();   
+    
+    if((hour+"").length < 2){
+      hour="0"+hour;      
+    }  
+    
+    function check_vision() {
+      if ((week[today.getDay()] == 1) && (eval(hour) >= 9 && eval(hour) <= 12)){
+        document.write("<img src='vision_dan.png'");
+      }else if((week[today.getDay()] == 1) && (eval(hour) >= 8 && eval(hour) < 9)){
+        document.write("<img src='vision_warn.png'");
+      }else{
+        document.write("<img src='vision_succ.png'");
+      }
+    } 
+    function check_PnC() {
+      if ((week[today.getDay()] == 0) && (eval(hour) >= 12 && eval(hour) <= 15)){
+        document.write("<img src='PnC_dan.png'");
+      }else if((week[today.getDay()] == 0) && (eval(hour) >= 11 && eval(hour) < 12)){
+        document.write("<img src='PnC_warn.png'");
+      }else{
+        document.write("<img src='PnC_succ.png'");
+      }
+    } 
+    function check_AMan() {
+      if ((week[today.getDay()] == 1) && (eval(hour) >= 13 && eval(hour) <= 15)){
+        document.write("<img src='AMan_dan.png'");
+      }else if((week[today.getDay()] == 1) && (eval(hour) >= 12 && eval(hour) < 13)){
+        document.write("<img src='AMan_warn.png'");
+      }else{
+        document.write("<img src='AMan_succ.png'");
+      }
+    } 
+    function check_Employment() {
+      if ((week[today.getDay()] == 4) && (eval(hour) >= 12 && eval(hour) <= 14)){
+        document.write("<img src='Employment_dan.png'");
+      }else if((week[today.getDay()] == 4) && (eval(hour) >= 11 && eval(hour) < 12)){
+        document.write("<img src='Employment_warn.png'");
+      }else{
+        document.write("<img src='Employment_succ.png'");
+      }
+    } 
+    function check_javaWeb() {
+      if ((week[today.getDay()] == 0) && (eval(hour) >= 15 && eval(hour) <= 17)){
+        document.write("<img src='javaWeb_dan.png'");
+      }else if((week[today.getDay()] == 0) && (eval(hour) >= 14 && eval(hour) < 15)){
+        document.write("<img src='javaWeb_warn.png'");
+      }else{
+        document.write("<img src='javaWeb_succ.png'");
+      }
+    } 
+    function check_game() {
+      if ((week[today.getDay()] == 1) && (eval(hour) >= 15 && eval(hour) <= 17)){
+        document.write("<img src='game_dan.png'");
+      }else if((week[today.getDay()] == 1) && (eval(hour) >= 14 && eval(hour) < 15)){
+        document.write("<img src='game_warn.png'");
+      }else{
+        document.write("<img src='game_succ.png'");
+      }
+    } 
+    function check_DB() {
+      if ((week[today.getDay()] == 2) && (eval(hour) >= 15 && eval(hour) <= 17)){
+        document.write("<img src='DB_dan.png'");
+      }else if((week[today.getDay()] == 2) && (eval(hour) >= 14 && eval(hour) < 15)){
+        document.write("<img src='DB_warn.png'");
+      }else{
+        document.write("<img src='DB_succ.png'");
+      }
+    }      
+  </script> 
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">20-2학기</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="assignment.html">Assignment</a>  
+        <a class="nav-link" href="report.html">Report</a>        
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <br>
+    <h3>
+      <script type="text/javascript">       
+      document.write(today.toLocaleDateString());
+      document.write(today.toLocaleTimeString() + '<br>');
+      </script>
+    </h3>
+    <br>
+    <div class="d-flex justify-content-center">
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link" style="padding: 3px; height: 200px"><img src="blank.png"></a>     
+        <a href="ass_vision.html" class="btn btn-lg btn-link" style="padding: 0px; height: 200px"><script type="text/javascript">check_vision()</script></a>
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link"  style="padding: 3px; height: 200px"><img src="blank.png"></a>
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link"  style="padding: 3px; height: 200px"><img src="blank.png"></a>
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link"  style="padding: 3px; height: 200px"><img src="blank.png"></a>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href="ass_PnC.html" class="btn btn-lg btn-link" style="padding: 0px; height: 200px"><script type="text/javascript">check_PnC()</script></a>
+        <a href="ass_AMan.html" class="btn btn-lg btn-link" style="padding: 0px; height: 200px"><script type="text/javascript">check_AMan()</script></a>
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link"  style="padding: 3px; height: 200px"><img src="blank.png"></a>
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link"  style="padding: 3px; height: 200px"><img src="blank.png"></a>
+        <a href="ass_Employment.html" class="btn btn-lg btn-link" style="padding: 0px; height: 200px"><script type="text/javascript">check_Employment()</script></a>
+        <a href=""></a>
+    </div>
+    <div class="d-flex justify-content-center" >
+        <a href="ass_javaWeb.html" class="btn btn-lg btn-link" style="padding: 0px; height: 200px"><script type="text/javascript">check_javaWeb()</script></a>
+        <a href="ass_game.html" class="btn btn-lg btn-link" style="padding: 0px; height: 200px"><script type="text/javascript">check_game()</script></a>
+        <a href="ass_DB.html" class="btn btn-lg btn-link" style="padding: 0px; height: 200px"><script type="text/javascript">check_DB()</script></a>
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link"  style="padding: 3px; height: 200px"><img src="blank.png"></a>
+        <a onclick="alert('근무시간 or 공부 중')" class="btn btn-lg btn-link"  style="padding: 3px; height: 200px"><img src="blank.png"></a>
+    </div>
+    <br>
+    <div class="d-flex justify-content-end">
+      <p class="btn">
+        <a href="index.html" class="btn btn-lg btn-link"><img src="time_check.png" width="80px" height="80px"></a>
+      </p>
+  </div>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>자바웹프로그래밍(2) 과제 - 우현 - 20190996.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
